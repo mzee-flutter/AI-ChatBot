@@ -5,6 +5,9 @@ import 'package:chat_wave/shared_preferences_services.dart';
 
 class LoginPage extends StatefulWidget {
   static const String id = 'login_page';
+
+  const LoginPage({super.key});
+  @override
   State<LoginPage> createState() => LoginPageState();
 }
 
@@ -25,7 +28,7 @@ class LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.grey.shade900,
       ),
       body: ModalProgressHUD(
-        progressIndicator: CircularProgressIndicator(
+        progressIndicator: const CircularProgressIndicator(
           valueColor: AlwaysStoppedAnimation<Color>(
             Colors.white70,
           ),
@@ -53,7 +56,7 @@ class LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    Align(
+                    const Align(
                       alignment: Alignment.center,
                       child: Text(
                         'We are happy to have you back!',
@@ -62,11 +65,11 @@ class LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
                     LogInPageTextField(
-                      label: Text(
+                      label: const Text(
                         'Email or Phone',
                       ),
                       onChange: (enterEmail) {
@@ -75,18 +78,18 @@ class LoginPageState extends State<LoginPage> {
                       controller: emailController,
                       keyboardType: TextInputType.emailAddress,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     LogInPageTextField(
-                      label: Text('Password'),
+                      label: const Text('Password'),
                       onChange: (enterPassword) {
                         password = enterPassword;
                       },
                       controller: passwordController,
                       keyboardType: TextInputType.visiblePassword,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 7,
                     ),
                     Row(
@@ -101,15 +104,15 @@ class LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Text(
+                        const Text(
                           'Remember me',
                           style: TextStyle(color: Colors.white24),
                         ),
-                        Spacer(),
-                        Text(
+                        const Spacer(),
+                        const Text(
                           'Forgot Password?',
                           style: TextStyle(
                             fontSize: 13,
@@ -119,12 +122,12 @@ class LoginPageState extends State<LoginPage> {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     MaterialButton(
                       height: 45,
-                      color: Color(0xff6B59A3),
+                      color: const Color(0xff6B59A3),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(7),
                       ),
@@ -261,7 +264,8 @@ class LogInPageTextField extends StatelessWidget {
   final TextEditingController controller;
   final TextInputType keyboardType;
 
-  LogInPageTextField({
+  const LogInPageTextField({
+    super.key,
     required this.label,
     required this.onChange,
     required this.controller,
