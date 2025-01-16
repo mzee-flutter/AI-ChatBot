@@ -41,6 +41,18 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+#project files to be ignore
+.metadata
+pubspec.lock
 .env
 firebase.json
 lib/firebase_options.dart
+
+#project folders to be ignore
+android/
+ios/
+build/
+.vscode/
+.dart_tool
+.idea
