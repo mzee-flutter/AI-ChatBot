@@ -207,7 +207,7 @@ class ChatPageState extends State<ChatPage> {
                     onTap: () => showDialog(
                       context: context,
                       builder: (context) {
-                        return chatWaveDropDown();
+                        return ChatWaveDropDown();
                       },
                     ),
                     child: const Row(
@@ -262,7 +262,7 @@ class ChatPageState extends State<ChatPage> {
                               fontWeight: FontWeight.w400,
                             ),
                             filled: true,
-                            fillColor: Color(0xff2F2F2F),
+                            fillColor: const Color(0xff2F2F2F),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
                               borderSide: BorderSide.none,
@@ -288,7 +288,7 @@ class ChatPageState extends State<ChatPage> {
                               child: Container(
                                 height: 25,
                                 width: 25,
-                                margin: EdgeInsets.all(7),
+                                margin: const EdgeInsets.all(7),
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: isWaiting
@@ -312,19 +312,19 @@ class ChatPageState extends State<ChatPage> {
                                     }
                                   },
                                   child: isWaiting
-                                      ? Icon(
+                                      ? const Icon(
                                           Icons.square_rounded,
                                           color: Colors.black,
                                           size: 15,
                                         )
-                                      : Icon(
+                                      : const Icon(
                                           Icons.upload,
                                         ),
                                 ),
                               ),
                             ),
                             prefixIconColor: Colors.grey,
-                            suffixIconColor: Color(0xff212121)),
+                            suffixIconColor: const Color(0xff212121)),
                       ),
                     ),
                   ),
@@ -385,7 +385,7 @@ class ChatPageState extends State<ChatPage> {
         child: AppDrawer(),
       ),
       body: promptResponse == null
-          ? IntialUI()
+          ? const IntialUI()
           : SafeArea(
               child: Padding(
                 padding:
@@ -415,10 +415,11 @@ class SelectImageSource extends StatelessWidget {
   final String title;
   final void Function() onTap;
 
-  SelectImageSource({
+  const SelectImageSource({
     required this.icon,
     required this.title,
     required this.onTap,
+    super.key,
   });
 
   @override

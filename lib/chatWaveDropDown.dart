@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class chatWaveDropDown extends StatelessWidget {
+class ChatWaveDropDown extends StatelessWidget {
+  const ChatWaveDropDown({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -13,7 +15,7 @@ class chatWaveDropDown extends StatelessWidget {
           child: Container(
             height: 170,
             decoration: BoxDecoration(
-              color: Color(0xff2F2F2F),
+              color: const Color(0xff2F2F2F),
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
                 color: Colors.grey,
@@ -37,16 +39,16 @@ class chatWaveDropDown extends StatelessWidget {
                           color: Colors.grey.shade800,
                           shape: BoxShape.circle,
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.auto_awesome_outlined,
                           size: 17,
                           color: Colors.white70,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
@@ -65,7 +67,7 @@ class chatWaveDropDown extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Container(
                         alignment: Alignment.center,
                         height: 25,
@@ -76,7 +78,7 @@ class chatWaveDropDown extends StatelessWidget {
                             color: Colors.grey.shade800,
                           ),
                         ),
-                        child: Text(
+                        child: const Text(
                           'Upgrade',
                           style: TextStyle(
                             color: Colors.white,
@@ -86,7 +88,7 @@ class chatWaveDropDown extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -98,16 +100,16 @@ class chatWaveDropDown extends StatelessWidget {
                           color: Colors.grey.shade800,
                           shape: BoxShape.circle,
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.check,
                           color: Colors.white70,
                           size: 17,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
@@ -128,7 +130,7 @@ class chatWaveDropDown extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Divider(
@@ -143,23 +145,23 @@ class chatWaveDropDown extends StatelessWidget {
                           color: Colors.grey.shade800,
                           shape: BoxShape.circle,
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.hourglass_top,
                           size: 17,
                           color: Colors.white70,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
-                      Text(
+                      const Text(
                         'Temporary chat',
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.white70,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Transform.scale(
                         scale: 0.6,
                         child: Switch(
@@ -167,7 +169,7 @@ class chatWaveDropDown extends StatelessWidget {
                           inactiveThumbColor: Colors.white,
                           value: true,
                           activeTrackColor: Colors.green,
-                          inactiveTrackColor: Color(0xff2F2F2F),
+                          inactiveTrackColor: const Color(0xff2F2F2F),
                           onChanged: (bool value) {},
                         ),
                       ),
