@@ -5,10 +5,10 @@ import 'chat_page.dart';
 import 'login_page.dart';
 
 class CheckingTokenSession {
-  final pref_services = SharedPreferencesServices();
+  final preferenceService = SharedPreferencesServices();
 
   Future<void> checkUserAuthentication(context) async {
-    pref_services.isUserLoggedIn().then((isLogIn) async {
+    preferenceService.isUserLoggedIn().then((isLogIn) async {
       if (context.mounted) {
         if (isLogIn) {
           await Future.delayed(const Duration(seconds: 3));
