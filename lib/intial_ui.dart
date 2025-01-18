@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class IntialUI extends StatelessWidget {
-  const IntialUI({
+class HomeInitialView extends StatelessWidget {
+  const HomeInitialView({
     super.key,
   });
 
@@ -10,7 +10,7 @@ class IntialUI extends StatelessWidget {
     return SafeArea(
       child: Center(
         child: Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             left: 10,
             right: 10,
             bottom: 15,
@@ -20,17 +20,17 @@ class IntialUI extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Padding(
+                const Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: 10,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 136,
                 ),
                 Container(
                   height: 80,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
                         'images/gemini-logo.png',
@@ -39,7 +39,7 @@ class IntialUI extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Container(
@@ -52,8 +52,8 @@ class IntialUI extends StatelessWidget {
                       width: 0,
                     ),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(
                       horizontal: 10,
                       vertical: 10,
                     ),
@@ -76,18 +76,18 @@ class IntialUI extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    LandScapeContainer(
+                    const LandScapeContainer(
                       containerIcon: Icons.flight_takeoff_outlined,
                       iconColor: Colors.amberAccent,
                       content: 'Plan a relaxing day',
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     LandScapeContainer(
@@ -109,11 +109,11 @@ class IntialUI extends StatelessWidget {
 }
 
 class LandScapeContainer extends StatelessWidget {
-  LandScapeContainer({
-    required this.containerIcon,
-    required this.content,
-    required this.iconColor,
-  });
+  const LandScapeContainer(
+      {required this.containerIcon,
+      required this.content,
+      required this.iconColor,
+      super.key});
   final String content;
   final IconData containerIcon;
   final Color iconColor;
@@ -143,12 +143,12 @@ class LandScapeContainer extends StatelessWidget {
               color: iconColor,
               size: 19,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
               content,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white54,
               ),
             ),

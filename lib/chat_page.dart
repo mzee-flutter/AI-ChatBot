@@ -385,7 +385,7 @@ class ChatPageState extends State<ChatPage> {
         child: AppDrawer(),
       ),
       body: promptResponse == null
-          ? const IntialUI()
+          ? const HomeInitialView()
           : SafeArea(
               child: Padding(
                 padding:
