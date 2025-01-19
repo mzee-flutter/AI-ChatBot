@@ -7,7 +7,9 @@ final lightTheme = ThemeData(
   appBarTheme: const AppBarTheme(
     backgroundColor: Colors.white,
     foregroundColor: Colors.black,
+
   ),
+  splashColor: Colors.transparent,
 );
 
 final darkTheme = ThemeData(
@@ -18,4 +20,5 @@ final darkTheme = ThemeData(
     backgroundColor: Colors.grey.shade900,
     foregroundColor: Colors.white70,
   ),
+  splashColor: Colors.transparent
 );

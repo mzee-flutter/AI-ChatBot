@@ -7,10 +7,10 @@ import 'package:flutter/material.dart';
 
 class GoogleSignInServices {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  final pref_services = SharedPreferencesServices();
+  final preferenceService = SharedPreferencesServices();
   final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
 
-  Future<User?> SignInWithGoogle(context) async {
+  Future<User?> signInWithGoogle(context) async {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
       if (googleUser == null) {
@@ -27,7 +27,7 @@ class GoogleSignInServices {
           await _auth.signInWithCredential(credential);
       String? tokenID = await userCredential.user?.getIdToken();
       if (tokenID != null) {
-        pref_services.saveToken(tokenID);
+        preferenceService.saveToken(tokenID);
         Navigator.pushNamedAndRemoveUntil(
           context,
           ChatPage.id,
@@ -43,7 +43,7 @@ class GoogleSignInServices {
     return null;
   }
 
-  Future<void> SignOut() async {
+  Future<void> signOut() async {
     await _auth.signOut();
     await _googleSignIn.signOut();
   }

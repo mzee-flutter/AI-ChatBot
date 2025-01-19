@@ -1,4 +1,3 @@
-import 'package:chat_wave/google_signIn_services.dart';
 import 'package:chat_wave/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -13,7 +12,6 @@ class AppDrawer extends StatefulWidget {
 
 class AppDrawerState extends State<AppDrawer> {
   final SharedPreferencesServices prefServices = SharedPreferencesServices();
-  final GoogleSignInServices _googleSignInServices = GoogleSignInServices();
   final fireStore = FirebaseFirestore.instance;
 
   final promptList = [];
@@ -293,7 +291,7 @@ class AppDrawerState extends State<AppDrawer> {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    LoginPage()),
+                                                  const   LoginPage()),
                                           );
                                         },
                                         child: ProfileAndSettings(

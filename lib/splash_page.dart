@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:chat_wave/checking_token_session.dart';
 
 class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
   static const String id = 'splash_page';
-
+  @override
   State<SplashPage> createState() => SplashPageState();
 }
 
@@ -44,12 +45,12 @@ class SplashPageState extends State<SplashPage> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              margin: EdgeInsets.only(
+              margin: const EdgeInsets.only(
                 bottom: 50,
               ),
               height: 45,
               width: 110,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
                     'images/googleword.png',

@@ -20,9 +20,9 @@ class MainPage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: SplashPage.id,
       routes: {
-        ChatPage.id: (context) => ChatPage(),
+        ChatPage.id: (context) => const ChatPage(),
         SplashPage.id: (context) => SplashPage(),
-        LoginPage.id: (context) => LoginPage(),
+        LoginPage.id: (context) => const LoginPage(),
       },
     );
   }

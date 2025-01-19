@@ -207,7 +207,7 @@ class ChatPageState extends State<ChatPage> {
                     onTap: () => showDialog(
                       context: context,
                       builder: (context) {
-                        return ChatWaveDropDown();
+                        return const ChatWaveDropDown();
                       },
                     ),
                     child: const Row(

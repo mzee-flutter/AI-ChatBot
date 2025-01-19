@@ -134,7 +134,7 @@ class ShowResponseDialogState extends State<ShowResponseDialog> {
                                           color: Colors.grey.shade900,
                                         ),
                                       )
-                                    : ResponseBelowIcons(
+                                    : const ResponseBelowIcons(
                                         icon: Icons.volume_up_rounded,
                                       ),
                               ),
@@ -188,11 +188,11 @@ class ShowResponseDialogState extends State<ShowResponseDialog> {
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              ResponseBelowIcons(
+                              const ResponseBelowIcons(
                                 icon: Icons.autorenew_rounded,
                               ),
                               const SizedBox(width: 10),
-                              ResponseBelowIcons(
+                              const ResponseBelowIcons(
                                 icon: Icons.auto_awesome,
                               ),
                             ],

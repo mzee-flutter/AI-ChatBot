@@ -189,8 +189,8 @@ class LoginPageState extends State<LoginPage> {
                             setState(() {
                               isSpinner = true;
                             });
-                            await _googleSignInServices.SignInWithGoogle(
-                                context);
+                            await _googleSignInServices
+                                .signInWithGoogle(context);
                             setState(() {
                               isSpinner = false;
                             });
