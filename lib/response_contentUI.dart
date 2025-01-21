@@ -77,7 +77,7 @@ class ResponseContentUIState extends State<ResponseContentUI> {
                       child: Text(
                         matchText.replaceAll("```", "").trim(),
                         style: const TextStyle(
-                          fontFamily: 'Fira Code',
+                          fontFamily: 'Fir Code',
                           color: Colors.white,
                           fontSize: 14,
                         ),
