@@ -282,9 +282,7 @@ class ChatPageState extends State<ChatPage> {
                               ),
                             ),
                             suffixIcon: InkWell(
-                              onTap: () {
-                                setState(() {});
-                              },
+                              onTap: () {},
                               child: Container(
                                 height: 25,
                                 width: 25,
