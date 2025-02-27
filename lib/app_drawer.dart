@@ -291,7 +291,7 @@ class AppDrawerState extends State<AppDrawer> {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                  const   LoginPage()),
+                                                    const LoginPage()),
                                           );
                                         },
                                         child: ProfileAndSettings(
