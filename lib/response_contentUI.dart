@@ -44,7 +44,7 @@ class ResponseContentUIState extends State<ResponseContentUI> {
   static List<InlineSpan> processText(String inputText) {
     String textWithoutHash = inputText;
     if (textWithoutHash.startsWith('##')) {
-      textWithoutHash.replaceAll('##', '').trim();
+      textWithoutHash = textWithoutHash.replaceAll('##', '').trim();
     }
 
     List<InlineSpan> spans = [];

@@ -43,8 +43,9 @@ class ChatPageState extends State<ChatPage> {
     return promptTitleList;
   }
 
-  String? promptResponse;
   String? prompt;
+  String? promptResponse;
+
   String? speechContent;
   bool isTextFieldEmpty = true;
   static bool isWaiting = false;
